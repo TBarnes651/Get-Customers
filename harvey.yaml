@@ -1,66 +1,97 @@
+# SENRAB — phase one: local prospect research and outreach DRAFTING only.
+#
+# Which file is used: harvey/config.py::_find_config_file() prefers
+# harvey.local.yaml (cwd, then project root) over this file. No harvey.local.yaml
+# exists. If one is ever created (`harvey train` writes one by default), it
+# silently overrides everything below, INCLUDING the phase-one safety settings.
+# Check with:  .venv/bin/python scripts/check_phase_one.py
+#
+# Nothing in here may be invented. Unknown values are left blank on purpose.
+
 persona:
-  name: "Harvey"
-  company: "Your Company"
-  role: "Business Development"
-  email: "harvey@yourcompany.com"
-  linkedin: "linkedin.com/in/harvey-yourcompany"
-  tone: "professional, consultative, confident"
+  name: ""            # TO BE SUPPLIED by the owner. Drafts sign off with {sender_name} so the
+                      # pre-send gate blocks any email that still carries the placeholder.
+  company: "SENRAB"
+  role: ""            # TO BE SUPPLIED
+  email: ""           # TO BE SUPPLIED. No sender address exists yet.
+  linkedin: ""        # TO BE SUPPLIED. No LinkedIn identity exists yet.
+  tone: "plain, human, courteous, British English, no hype"
 
 product:
-  name: "Your Product"
-  description: "Describe what your product does and who it's for"
-  pricing: "Starting at $X/mo"
+  name: "SENRAB bespoke operational software"
+  description: >-
+    SENRAB builds bespoke software that replaces paper forms, disconnected
+    spreadsheets and manual administration for contractors. See
+    skills/product_knowledge.md for what is confirmed and what is not.
+  pricing: "Not published. Never quote, estimate or imply a price."
   key_benefits:
-    - "Benefit 1"
-    - "Benefit 2"
-    - "Benefit 3"
+    - "Replaces paper forms and disconnected spreadsheets with one system built around how the business already works"
+    - "Aimed at duplicated job-sheet entry between site and office"
+    - "Aimed at giving the office better visibility of jobs and site evidence"
+    - "Aimed at slow handovers from site to office and the delayed invoicing that follows"
   objection_responses:
-    "too expensive": "I understand budget is important. Most of our clients see ROI within 30 days..."
-    "already have a solution": "That makes sense. Curious — what's the one thing you wish it did better?"
-    "not interested": "No worries at all. Mind if I ask what your current approach looks like?"
+    "too expensive": "Fair. I cannot say what anything would cost without understanding the workflow, which is the point of the review. Would it help to see whether there is a case first?"
+    "already have a system": "That is useful to know. What does it still leave you doing by hand?"
+    "we use spreadsheets and they work": "They often do, up to a point. Where do they start to creak, if anywhere?"
+    "not interested": "Understood, and thank you for replying. I will not contact you again."
+    "no time": "Understood. I will leave it with you and not chase."
+    "tried software before": "That is worth hearing about. What went wrong with it?"
   offer:
-    primary: ""                    # Main offer (e.g., "Monthly subscription starting at $99/mo")
-    entry: ""                      # Low-commitment entry (e.g., "14-day free trial", "Free audit")
-    goal: "book_call"              # Goal of outreach: book_call, start_trial, get_reply
-    booking_method: "calendar_link" # calendar_link, suggest_times, ask_preference
-    booking_url: ""                # Calendar link URL (if using calendar_link method)
-    meeting_duration: "15 minutes" # How long the call is
-    meeting_owner: ""              # Who takes the meeting (name or role)
+    primary: "Bespoke operational software. Pricing is not published."
+    entry: "A free operational review"
+    goal: "get_reply"               # Start a useful conversation. No call booking in phase one.
+    booking_method: "ask_preference"
+    booking_url: ""
+    meeting_duration: "to be confirmed"
+    meeting_owner: ""
 
 icp:
+  # Discovery builds one query per (industry x geography). The free OpenStreetMap source only
+  # maps "contractor" (builders / construction companies) and "electric*"; it has no telecoms
+  # tag, so the telecoms term currently duplicates the construction search. See the setup notes.
   industries:
-    - "SaaS"
-    - "Marketing Agency"
-  company_size: "10-200 employees"
+    - "construction contractor"
+    - "telecoms contractor"
+  # Deliberately NOT a headcount filter. Financial eligibility is a manual review criterion:
+  # revenue >= GBP 2m, or (no revenue) net assets > GBP 750k and cash > GBP 250k, from an
+  # identified filing and date. Harvey has no native support for this.
+  company_size: "Not filtered on headcount. Do not infer financial eligibility from employee count or website appearance."
   titles:
-    - "VP Marketing"
-    - "Head of Growth"
-    - "CMO"
-    - "Director of Marketing"
+    - "Owner"
+    - "Managing Director"
+    - "Operations Director"
+    - "Director of Operations"
   geography:
-    - "United States"
-  # Roles that signal a company is in-market RIGHT NOW (a company hiring a
-  # "Head of Growth" is shopping for growth tooling). Used for careers-page
-  # scanning and job-board discovery. Empty = fall back to titles above.
-  hiring_signals: []
+    - "Greater Manchester"
+    - "North West England"
+  # lat,lng,radius_km. Keys must equal the geography strings above exactly.
+  geo_coordinates:
+    "Greater Manchester": "53.4808,-2.2426,30"
+    "North West England": "53.7000,-2.7500,70"
+  # Roles that MAY indicate office or admin load. A hypothesis only; not evidence of need.
+  hiring_signals:
+    - "Contracts Administrator"
+    - "Operations Coordinator"
+    - "Planner"
+    - "Document Controller"
 
 channels:
   email:
-    enabled: true
-    provider: "gmail"          # gmail (recommended) | smtp | instantly
-    max_daily_sends: 50
-    require_approval: true      # native providers: emails wait in the Outbox
-    send_to_risky: false        # also send to catch-all domains (off = safest)
-    max_bounce_rate: 0.05       # pause all sending if bounces exceed this
+    enabled: false              # master switch: Sender and Handler return immediately
+    provider: "gmail"           # inert while enabled is false and no credentials exist
+    max_daily_sends: 0
+    require_approval: true      # PRESERVED
+    send_to_risky: false        # PRESERVED
+    max_bounce_rate: 0.05
   linkedin:
-    enabled: true
-    max_daily_connections: 20
-    max_daily_messages: 10
+    enabled: false
+    max_daily_connections: 0
+    max_daily_messages: 0
 
 usage:
-  max_daily_claude_percent: 80
+  max_daily_claude_percent: 20
   heartbeat_interval_minutes: 15
   quiet_hours:
     start: "22:00"
     end: "07:00"
-    timezone: "America/New_York"
+    timezone: "Europe/London"

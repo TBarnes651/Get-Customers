@@ -299,3 +299,24 @@ Before finalizing any email, ask:
 8. Is the subject line honest, and the identity the real configured persona?
 
 If the answer to #5 or #6 is yes, or #7 or #8 is no, rewrite it. No exceptions.
+
+---
+
+## SENRAB overlay (takes precedence over everything above)
+
+- British English throughout: organisation, programme, whilst is fine but plain "while" is better,
+  "colour", "licence" (noun), dates as 13 October.
+- Plain and human. Write as one tradesperson-friendly adult to another. No jargon: "software" not
+  "solution", "job sheets" not "workflow orchestration".
+- Email 1: one observation, one question, under 75 words, no product name, no offer, no link.
+- Email 2: name SENRAB once, describe it using only section A of skills/product_knowledge.md, and
+  make the offer once: a free operational review. "Free" appears only here and in later steps.
+- Email 3: gracious close, under 40 words.
+- Never assert how the recipient's business works internally. Ask. "How do job sheets get from site
+  to the office at the moment?" is fine. "Your office keeps retyping job sheets" is not.
+- Sign off with the placeholder `{sender_name}`. No invented name, role, phone, address or link.
+- UK B2B cold email relies on legitimate interest (PECR treats corporate subscribers more lightly
+  than individuals, but a sole trader or partnership is treated as an individual). Drafts must be
+  relevant to the person's role, make objecting easy, and be sent only after a human has checked the
+  recipient type. Phase one sends nothing.
+- Draft only. Every draft is reviewed and approved by a human before any future send.

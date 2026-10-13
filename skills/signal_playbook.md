@@ -86,3 +86,20 @@ faces right now — stated as an observation, not a fake personalization.
 "Most teams at your headcount still reconcile this by hand" is a true,
 useful opener.
 "I was looking at your website and love what you're doing" is not.
+
+---
+
+## SENRAB overlay (takes precedence over everything above)
+
+The generic signals above (funding, tech-gap, "no chat widget") do not apply to contractors.
+Never use a website gap as a hook: a missing booking button, stale blog or missing schema says
+nothing about whether a contractor needs bespoke operational software.
+
+Usable hooks, in order of strength, each only if the notes cite it:
+1. A role they are advertising that relates to coordination or administration (hypothesis about
+   workload; say what the advert says, not what you suspect).
+2. A named project, framework or sector they publicly state they work in.
+3. A role-level observation for owners / MDs / operations directors in this trade, stated as a
+   question, not a claim about them.
+
+If there is no cited signal, use hook 3 and say nothing about the company's own processes.

@@ -142,3 +142,14 @@ When a prospect asks about pricing before you've qualified them:
 2. Frame it with context: "Plans start at $X/mo, depending on [variable]. Most teams your size are on the [tier] plan."
 3. Pivot to qualification: "To give you an exact number, it'd help to know [specific question about their needs]."
 4. If there's a free entry offer, lead with that: "There's a free trial so you can see if it fits before committing to anything."
+
+---
+
+## SENRAB overlay (takes precedence over everything above)
+
+Primary offer: bespoke operational software, price not published (never quote one).
+Entry offer: a free operational review.
+Goal: start a useful conversation. Phase one does not book meetings, share calendar links, or
+propose times. If a reply were ever to arrive, a human answers it.
+Do not promise outcomes, timelines or savings, and do not describe what the review contains beyond
+"a look at how jobs and paperwork currently move between site and office".

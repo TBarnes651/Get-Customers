@@ -33,7 +33,7 @@ STRICT EMAIL RULES — FOLLOW EVERY SINGLE ONE:
 17. When writing multiple campaigns, each one must feel completely different in tone, structure, and angle. Not just different pain points in the same format.
 
 SPAM FILTER RULES — these words and patterns get emails junked. NEVER use:
-- "free", "guarantee", "guaranteed", "risk-free", "no risk", "no cost", "act now", "limited time", "limited offer", "exclusive deal", "special offer", "discount", "% off", "save big", "winner", "congratulations", "urgent", "don't miss", "last chance" (in subject lines), "buy now", "click here", "click below", "sign up now", "make money", "increase sales", "double your", "100%", "$$$"
+- "free" (EXCEPTION: the exact phrase "free operational review" is allowed from email 2 onward, never in a subject line), "guarantee", "guaranteed", "risk-free", "no risk", "no cost", "act now", "limited time", "limited offer", "exclusive deal", "special offer", "discount", "% off", "save big", "winner", "congratulations", "urgent", "don't miss", "last chance" (in subject lines), "buy now", "click here", "click below", "sign up now", "make money", "increase sales", "double your", "100%", "$$$"
 - No ALL CAPS words anywhere. No more than one question mark per email.
 - No links in email 1. At most one link total across the sequence, and only if essential.
 - No attachments, no images, no HTML tricks. Plain text.
